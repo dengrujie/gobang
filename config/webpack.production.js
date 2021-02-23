@@ -6,7 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   output: {
-    publicPath: '/',
+    publicPath: './',
     path: join(__dirname, '../dist'),
   },
   externals: {
