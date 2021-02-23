@@ -51,6 +51,7 @@ export default class Gobang {
   // 落子
   listenDownChessman(x, y) {
     // 空的位置才可以落子
+    const role = this.role;
     if (
       this.checkerboard[x][y] !== undefined &&
       this.checkerboard[x][y] === 0
@@ -68,7 +69,7 @@ export default class Gobang {
       this.currentStep++;
       this.role = Object.is(this.role, 1) ? 2 : 1;
     }
-    const role = this.role;
+    
     this.downChessCallback.forEach((cb) => cb(x, y, role));
     this.CheckerboardCallback.forEach((cb) => cb(this.checkerboard));
     this.checkWin(x, y, this.role);
