@@ -9,10 +9,6 @@ module.exports = {
     publicPath: './',
     path: join(__dirname, '../dist'),
   },
-  externals: {
-    react: 'React',
-    reactDom:'react-dom'
-  },
   //webpack5的splitechunk只能在生成环境中使用
   optimization: {
     minimize: true,
